@@ -1,0 +1,32 @@
+<!--
+  Emits WebSite + Person JSON-LD on every page.
+  Edit _config.yml → your changes propagate here automatically.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description | strip_html | strip_newlines }}",
+      "publisher": { "@id": "{{ site.url }}/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}/",
+      "email": "{{ site.author.email }}",
+      "description": "{{ site.description | strip_html | strip_newlines }}",
+      "sameAs": [
+        {% for profile in site.author.social %}
+          "{{ profile }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>
