@@ -824,3 +824,171 @@ main { flex: 1; }
   color: var(--color-text-muted);
   max-width: 45ch;
 }
+/* ============================================================
+   EVENTS PAGE STYLES
+   Add these to the bottom of assets/css/main.css
+============================================================ */
+
+/* ── EVENTS LIST ───────────────────────────────────────────── */
+.events-upcoming {
+  border-bottom: 1px solid var(--color-divider);
+}
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--space-6);
+}
+
+/* ── EVENT CARD ────────────────────────────────────────────── */
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--space-8);
+  padding-block: var(--space-8);
+  border-bottom: 1px solid var(--color-divider);
+  align-items: start;
+}
+.event-card:last-child { border-bottom: none; }
+
+/* Date block */
+.event-card__date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-2);
+  text-align: center;
+  min-height: 88px;
+}
+.event-card__month {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.event-card__day {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--color-text);
+  margin-block: var(--space-1);
+}
+.event-card__year {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+/* Body */
+.event-card__type {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+.event-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.event-card__location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+.event-card__location svg { flex-shrink: 0; color: var(--color-primary); }
+.event-card__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+.event-card__desc a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.event-card__desc a:hover { text-decoration: underline; }
+
+/* Past event variant — muted treatment */
+.event-card--past .event-card__date-block {
+  background: var(--color-surface);
+  border-color: var(--color-divider);
+}
+.event-card--past .event-card__month { color: var(--color-text-faint); }
+.event-card--past .event-card__day   { color: var(--color-text-faint); }
+.event-card--past .event-card__type  { color: var(--color-text-faint); }
+.event-card--past .event-card__title { color: var(--color-text-muted); }
+
+/* ── PAST EVENTS SECTION ───────────────────────────────────── */
+.events-past {
+  padding-block: clamp(var(--space-10), 6vw, var(--space-16));
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+/* ── EMPTY STATE ───────────────────────────────────────────── */
+.events-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  color: var(--color-text-muted);
+}
+.events-empty svg {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-faint);
+}
+.events-empty h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.events-empty p { max-width: 36ch; }
+.events-empty a { color: var(--color-primary); text-decoration: none; }
+.events-empty a:hover { text-decoration: underline; }
+
+/* ── BOOKING STRIP ─────────────────────────────────────────── */
+.events-booking-strip {
+  background: var(--color-surface-offset);
+  padding-block: clamp(var(--space-10), 6vw, var(--space-16));
+}
+.events-booking-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.events-booking-strip__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+}
+.events-booking-strip__body {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+}
+.events-booking-strip__btn { flex-shrink: 0; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .event-card {
+    grid-template-columns: 80px 1fr;
+    gap: var(--space-4);
+  }
+  .event-card__day { font-size: var(--text-xl); }
+}
