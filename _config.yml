@@ -1,0 +1,52 @@
+# ============================================================
+# _config.yml — Site-wide configuration
+# All SEO defaults, schema seeds, and nav live here.
+# Change these once; they propagate everywhere via layout.
+# ============================================================
+
+# --- Core Identity ---
+title:       "Alice Oldford"
+tagline:     "Author · Real Estate Professional"
+description: "Official website of Alice Oldford — novelist, memoirist, and licensed real estate professional serving the Lake Placid area."
+baseurl:     ""          # leave empty unless deploying to a sub-path
+url:         "https://www.aliceoldford.com"
+
+# --- Author / Person Schema ---
+author:
+  name:  "Alice Oldford"
+  email: "alice@aliceoldford.com"
+  phone: ""
+  social:
+    - https://www.facebook.com/aliceoldford
+    # - https://twitter.com/aliceoldford
+
+# --- Organization / Brand Schema ---
+organization:
+  name: "Alice Oldford"
+  type: "Person"
+  logo: "/assets/images/logo.png"
+
+# --- Navigation (order controls menu order) ---
+nav:
+  - label: "Home"
+    url:   "/"
+  - label: "Books"
+    url:   "/books.html"
+  - label: "Real Estate"
+    url:   "/realestate.html"
+  - label: "Pictures & Links"
+    url:   "/pictures.html"
+  - label: "Events"
+    url:   "/events.html"
+  - label: "Contact"
+    url:   "/contact.html"
+  - label: "Archive"
+    url:   "/archive.html"
+
+# --- Build settings ---
+markdown:  kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
