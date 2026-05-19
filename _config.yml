@@ -8,13 +8,13 @@
 title:       "Alice Oldford"
 tagline:     "Author · Real Estate Professional"
 description: "Official website of Alice Oldford — novelist, memoirist, and licensed real estate professional serving the Lake Placid area."
-baseurl:     ""          # leave empty unless deploying to a sub-path
-url:         "https://www.aliceoldford.com"
+baseurl:    "https://stuartorton.github.io"
+url:        "/aliceoldford.com"
 
 # --- Author / Person Schema ---
 author:
   name:  "Alice Oldford"
-  email: "alice@aliceoldford.com"
+  email: "aoldford@yahoo.com"
   phone: ""
   social:
     - https://www.facebook.com/aliceoldford
