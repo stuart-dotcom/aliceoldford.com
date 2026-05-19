@@ -10,7 +10,6 @@ breadcrumbs:
 
 {% include breadcrumbs.html %}
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
     <p class="page-hero__label">Past Issues</p>
@@ -23,53 +22,28 @@ breadcrumbs:
   </div>
 </section>
 
-<!-- ARCHIVE LIST -->
 <section class="page-content archive-section">
   <div class="container">
 
-    <!-- ============================================================
-         HOW THIS PAGE WORKS
-         Newsletter entries are defined in _data/newsletters.yml
-         Jekyll reads that file and loops over it here automatically.
-         To add a new issue:
-           1. Upload the PDF to /assets/newsletters/
-           2. Open _data/newsletters.yml
-           3. Add one entry at the TOP of the list (newest first):
-                - title:       "Spring 2025"
-                  date:        "2025-04-01"
-                  label:       "April 2025"
-                  description: "One sentence about what is in this issue."
-                  file:        "/assets/newsletters/alice-newsletter-spring-2025.pdf"
-         That is all — the page updates itself.
-    ============================================================ -->
-
     {% if site.data.newsletters and site.data.newsletters.size > 0 %}
 
-      <!-- Issues are grouped by year for easy browsing -->
       {% assign newsletters_by_year = site.data.newsletters | group_by_exp: "item", "item.date | date: '%Y'" %}
 
       {% for year_group in newsletters_by_year %}
         <div class="archive-year-group">
           <h2 class="archive-year-heading">{{ year_group.name }}</h2>
-
           <ul class="archive-list" role="list">
             {% for issue in year_group.items %}
             <li class="archive-item">
-
-              <!-- PDF icon -->
               <div class="archive-item__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="1.5">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12
-                           a2 2 0 0 0 2-2V8z"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                   <polyline points="14 2 14 8 20 8"/>
                   <line x1="9" y1="13" x2="15" y2="13"/>
                   <line x1="9" y1="17" x2="13" y2="17"/>
                 </svg>
                 <span class="archive-item__filetype">PDF</span>
               </div>
-
-              <!-- Issue info -->
               <div class="archive-item__body">
                 <p class="archive-item__date">{{ issue.label }}</p>
                 <h3 class="archive-item__title">{{ issue.title }}</h3>
@@ -77,36 +51,28 @@ breadcrumbs:
                   <p class="archive-item__desc">{{ issue.description }}</p>
                 {% endif %}
               </div>
-
-              <!-- Download link -->
               <a class="archive-item__download btn btn--outline"
-                 href="{{ issue.file }}"
+                 href="{{ site.baseurl }}{{ issue.file }}"
                  download
                  aria-label="Download {{ issue.title }} newsletter PDF">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
                 Download
               </a>
-
             </li>
             {% endfor %}
           </ul>
-
-        </div><!-- /.archive-year-group -->
+        </div>
       {% endfor %}
 
     {% else %}
 
-      <!-- EMPTY STATE — shown when _data/newsletters.yml has no entries yet -->
       <div class="archive-empty">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12
-                   a2 2 0 0 0 2-2V8z"/>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
           <line x1="9" y1="13" x2="15" y2="13"/>
           <line x1="9" y1="17" x2="13" y2="17"/>
@@ -115,8 +81,8 @@ breadcrumbs:
         <p>
           Past newsletter issues will appear here once they have been
           uploaded. Check back soon — or
-          <a href="/contact.html">contact Alice</a> to be added to the
-          mailing list.
+          <a href="{{ site.baseurl }}/contact/">contact Alice</a> to be
+          added to the mailing list.
         </p>
       </div>
 
@@ -125,20 +91,16 @@ breadcrumbs:
   </div>
 </section>
 
-<!-- SUBSCRIBE STRIP -->
 <section class="archive-subscribe-strip">
   <div class="container archive-subscribe-strip__inner">
     <div>
-      <h2 class="archive-subscribe-strip__title">
-        Never Miss an Issue
-      </h2>
+      <h2 class="archive-subscribe-strip__title">Never Miss an Issue</h2>
       <p class="archive-subscribe-strip__body">
         Get Alice's newsletter delivered straight to your inbox —
-        trail tips, local news, and real estate updates from
-        Lake Placid, Florida.
+        trail tips, local news, and real estate updates from Lake Placid, Florida.
       </p>
     </div>
-    <a href="/contact.html" class="btn btn--primary archive-subscribe-strip__btn">
+    <a href="{{ site.baseurl }}/contact/" class="btn btn--primary archive-subscribe-strip__btn">
       Get in Touch to Subscribe
     </a>
   </div>
