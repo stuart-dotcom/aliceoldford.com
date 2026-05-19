@@ -1,0 +1,22 @@
+<!--
+  Emits BreadcrumbList JSON-LD only when page.breadcrumbs is present.
+  Reads the same list as breadcrumbs.html — single source of truth.
+-->
+{% if page.breadcrumbs and page.breadcrumbs.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in page.breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ crumb.label }}",
+      "item": "{{ site.url }}{{ site.baseurl }}{% if crumb.url %}{{ crumb.url }}{% else %}{{ page.url }}{% endif %}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
