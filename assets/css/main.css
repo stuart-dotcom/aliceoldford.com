@@ -535,3 +535,171 @@ main { flex: 1; }
     position: static;
   }
 }
+/* ============================================================
+   REAL ESTATE PAGE STYLES
+   Add these to the bottom of assets/css/main.css
+============================================================ */
+
+/* ── INTRO GRID ────────────────────────────────────────────── */
+.re-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: clamp(var(--space-8), 6vw, var(--space-16));
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .re-intro__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pull quote inside bio */
+.re-quote {
+  border-left: 3px solid var(--color-primary-highlight);
+  padding-left: var(--space-4);
+  margin-block: var(--space-6);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+}
+.re-quote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin-top: var(--space-2);
+}
+
+/* ── CONTACT CARD ──────────────────────────────────────────── */
+.re-contact-card {
+  position: sticky;
+  top: calc(var(--space-16) + var(--space-4));
+}
+.re-contact-card__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+}
+.re-contact-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.re-contact-card__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.re-contact-card__item svg { flex-shrink: 0; margin-top: 2px; color: var(--color-primary); }
+.re-contact-card__item a { color: var(--color-primary); text-decoration: none; }
+.re-contact-card__item a:hover { text-decoration: underline; }
+.re-contact-card__btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+
+/* ── SPECIALTIES ───────────────────────────────────────────── */
+.re-specialties {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+}
+.re-specialties__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  list-style: none;
+}
+.re-specialties__item {
+  background: var(--color-surface-2);
+  border: 1px solid oklch(from var(--color-text) l c h / 0.07);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.re-specialties__label {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+.re-specialties__item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ── TESTIMONIAL ───────────────────────────────────────────── */
+.re-testimonial {
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  background: var(--color-primary);
+}
+.re-testimonial__inner {
+  max-width: var(--content-narrow);
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: clamp(var(--space-4), 4vw, var(--space-8));
+}
+.re-testimonial__mark {
+  color: oklch(from var(--color-text-inverse) l c h / 0.3);
+  margin-inline: auto;
+  margin-bottom: var(--space-4);
+}
+.re-testimonial__quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--color-text-inverse);
+  line-height: 1.5;
+  max-width: none;
+  margin-bottom: var(--space-4);
+}
+.re-testimonial__cite {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: oklch(from var(--color-text-inverse) l c h / 0.75);
+  font-style: normal;
+}
+
+/* ── CREDENTIALS ───────────────────────────────────────────── */
+.re-credentials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--space-8), 6vw, var(--space-16));
+  margin-top: var(--space-6);
+}
+.re-credentials__group-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-divider);
+}
+.re-credentials__list {
+  padding-left: var(--space-5);
+  max-width: none;
+}
+.re-credentials__list li {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 640px) {
+  .re-credentials__grid { grid-template-columns: 1fr; }
+}
