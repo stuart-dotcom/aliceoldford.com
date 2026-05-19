@@ -1,0 +1,49 @@
+<!--
+  Iterates site.nav from _config.yml.
+  Active state is set via aria-current="page" and the
+  .site-nav__link--active class, compared against page.url.
+-->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+
+  <button class="site-nav__toggle" id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Open navigation menu">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+
+  <ul class="site-nav__list" id="nav-menu" role="list">
+    {% for item in site.nav %}
+      {% assign is_active = false %}
+      {% if item.url == "/" and page.url == "/" %}
+        {% assign is_active = true %}
+      {% elsif item.url != "/" and page.url contains item.url %}
+        {% assign is_active = true %}
+      {% endif %}
+
+      <li class="site-nav__item">
+        <a class="site-nav__link{% if is_active %} site-nav__link--active{% endif %}"
+           href="{{ site.baseurl }}{{ item.url }}"
+           {% if is_active %}aria-current="page"{% endif %}>
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</nav>
+
+<script>
+  (function () {
+    var btn  = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open', !expanded);
+    });
+  })();
+</script>
