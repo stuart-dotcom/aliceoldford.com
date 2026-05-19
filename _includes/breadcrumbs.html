@@ -1,13 +1,3 @@
-<!--
-  Renders a visible breadcrumb trail from page.breadcrumbs (front matter).
-  If a page sets no breadcrumbs, this include outputs nothing.
-
-  Front matter format:
-    breadcrumbs:
-      - label: "Home"
-        url:   "/"
-      - label: "Books"     ← last item; no url needed (links to current page)
--->
 {% if page.breadcrumbs and page.breadcrumbs.size > 0 %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <div class="container">
@@ -19,7 +9,7 @@
             <span class="breadcrumbs__current" aria-current="page">{{ crumb.label }}</span>
           {% else %}
             <a class="breadcrumbs__link" href="{{ site.baseurl }}{{ crumb.url }}">{{ crumb.label }}</a>
-            <span class="breadcrumbs__sep" aria-hidden="true">›</span>
+            <span class="breadcrumbs__sep" aria-hidden="true">&rsaquo;</span>
           {% endif %}
         </li>
       {% endfor %}

@@ -4,21 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- TITLE: page.title | site.title, with name suffix on inner pages -->
   {% if page.title and page.title != site.title %}
     <title>{{ page.title }} | {{ site.author.name }}</title>
   {% else %}
-    <title>{{ site.title }} — {{ site.tagline }}</title>
+    <title>{{ site.title }} &mdash; {{ site.tagline }}</title>
   {% endif %}
 
-  <!-- META DESCRIPTION: page.description or site-wide fallback -->
   <meta name="description"
         content="{{ page.description | default: site.description | strip_html | truncatewords: 30 }}">
 
-  <!-- CANONICAL URL: built from site.url + page.url (Jekyll sets page.url automatically) -->
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
 
-  <!-- OPEN GRAPH -->
   <meta property="og:type"        content="{{ page.og_type | default: 'website' }}">
   <meta property="og:title"       content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description | strip_html | truncatewords: 30 }}">
@@ -28,22 +24,16 @@
   <meta property="og:image"       content="{{ site.url }}{{ site.baseurl }}{{ page.og_image }}">
   {% endif %}
 
-  <!-- FAVICON -->
   <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" type="image/x-icon">
 
-  <!-- FONTS: Instrument Serif (display) + Work Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300..700&display=swap"
         rel="stylesheet">
 
-  <!-- STYLESHEET -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-  <!-- JSON-LD: site-level (WebSite + Person) — always present -->
   {% include schema-site.html %}
-
-  <!-- JSON-LD: BreadcrumbList — only when page.breadcrumbs is set -->
   {% include schema-breadcrumb.html %}
 
 </head>
