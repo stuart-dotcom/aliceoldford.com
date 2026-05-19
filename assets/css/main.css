@@ -703,3 +703,124 @@ main { flex: 1; }
 @media (max-width: 640px) {
   .re-credentials__grid { grid-template-columns: 1fr; }
 }
+/* ============================================================
+   PICTURES & LINKS PAGE STYLES
+   Add these to the bottom of assets/css/main.css
+============================================================ */
+
+/* ── GALLERY ───────────────────────────────────────────────── */
+.pictures-gallery {
+  border-bottom: 1px solid var(--color-divider);
+}
+.pictures-gallery__intro {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+  max-width: 60ch;
+}
+.pictures-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-4);
+  list-style: none;
+}
+
+/* Real photo item (used when placeholders are replaced) */
+.gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+}
+.gallery-item__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.gallery-item__caption {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Placeholder item */
+.gallery-item--placeholder {
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface-offset);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-placeholder__label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-faint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── LINKS SECTION ─────────────────────────────────────────── */
+.pictures-links {
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  background: var(--color-surface);
+}
+.pictures-links__intro {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-10);
+  max-width: 60ch;
+}
+
+/* Category grid */
+.links-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+  gap: clamp(var(--space-6), 4vw, var(--space-10));
+}
+
+/* Single category block */
+.links-category__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: var(--color-text);
+}
+.links-category__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  list-style: none;
+}
+
+/* Individual link item */
+.links-item__link {
+  display: inline-block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: var(--space-1);
+}
+.links-item__link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Placeholder label (shown until real link is added) */
+.links-item__placeholder {
+  display: inline-block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-1);
+  cursor: default;
+}
+.links-item__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 45ch;
+}
