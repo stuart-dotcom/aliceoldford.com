@@ -1,0 +1,19 @@
+# _data/newsletters.yml
+# ============================================================
+# Add new issues at the TOP (newest first).
+# Jekyll reads this file and builds the Archive page automatically.
+#
+# Fields:
+#   title:       Short display name   e.g. "Spring 2025"
+#   date:        ISO date             e.g. "2025-04-01"  (used for year grouping)
+#   label:       Human-readable date  e.g. "April 2025"
+#   description: One sentence summary (optional but recommended)
+#   file:        Path to PDF          e.g. "/assets/newsletters/spring-2025.pdf"
+# ============================================================
+
+# ---- Placeholder entries (replace with real issues when ready) ----
+- title:       "Sample Issue — Title Coming Soon"
+  date:        "2025-01-01"
+  label:       "January 2025"
+  description: "Description of this issue coming soon."
+  file:        "/assets/newsletters/placeholder.pdf"
