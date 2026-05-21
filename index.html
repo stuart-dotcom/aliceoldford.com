@@ -19,16 +19,30 @@ breadcrumbs:
     >
   </div>
   <div class="home-hero__overlay">
-    <div class="container">
-      <p class="home-hero__eyebrow">Author · Adventurer · Realtor</p>
-      <h1 class="home-hero__title">Alice Oldford</h1>
-      <p class="home-hero__lead">
-        Guiding readers through Florida's wild places — and helping families
-        find their place in beautiful Lake Placid.
-      </p>
-      <div class="home-hero__actions">
-        <a href="{{ site.baseurl }}/books.html" class="btn btn--primary">Explore the Books</a>
-        <a href="{{ site.baseurl }}/realestate.html" class="btn btn--outline">Real Estate</a>
+    <div class="container home-hero__content">
+      <div class="home-hero__intro">
+        <p class="home-hero__eyebrow">Author · Adventurer · Realtor</p>
+        <h1 class="home-hero__title">Alice Oldford</h1>
+        <p class="home-hero__lead">
+          Guiding readers through Florida's wild places — and helping families
+          find their place in beautiful Lake Placid.
+        </p>
+        <div class="home-hero__actions">
+          <a href="{{ site.baseurl }}/books.html" class="btn btn--primary">Explore the Books</a>
+          <a href="{{ site.baseurl }}/realestate.html" class="btn btn--outline">Real Estate</a>
+        </div>
+      </div>
+
+      <div class="home-hero__portrait">
+        <img
+          src="{{ site.baseurl }}/assets/images/Alice.jpg"
+          alt="Author and real estate broker Alice Oldford"
+          width="320"
+          height="320"
+          loading="lazy"
+          decoding="async"
+          class="home-hero__portrait-img"
+        >
       </div>
     </div>
   </div>
@@ -58,8 +72,16 @@ breadcrumbs:
       </a>
     </div>
     <div class="home-about__aside">
-      <div class="home-about__photo-placeholder" aria-label="Photo of Alice Oldford" role="img">
-        <span class="home-about__photo-initials" aria-hidden="true">AO</span>
+      <div class="home-about__photo">
+        <img
+          src="{{ site.baseurl }}/assets/images/Alice.jpg"
+          alt="Portrait of Alice Oldford"
+          width="360"
+          height="360"
+          loading="lazy"
+          decoding="async"
+          class="home-about__photo-img"
+        >
       </div>
     </div>
   </div>
@@ -82,13 +104,16 @@ breadcrumbs:
         </div>
         <a href="{{ site.baseurl }}/books.html" class="btn btn--primary" style="margin-top: var(--space-5);">See All Books</a>
       </div>
-      <div class="home-books__cover-placeholder" aria-label="Book cover" role="img">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.5" aria-hidden="true"
-             style="color: var(--color-primary-highlight);">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-        </svg>
+      <div class="home-books__cover">
+        <img
+          src="{{ site.baseurl }}/assets/images/10_Adventures_Front_Cover.jpg"
+          alt="Book cover of 10 Adventures and More in Lee and Collier Counties by Alice Oldford"
+          width="260"
+          height="400"
+          loading="lazy"
+          decoding="async"
+          class="home-books__cover-img"
+        >
       </div>
     </div>
   </div>
