@@ -1,141 +1,139 @@
 ---
 layout: default
-title: "Alice Oldford"
-description: "Author of Florida outdoor adventure guides and Associate Real Estate Broker at Century 21 Lake & Land Myers Realty in Lake Placid, Florida."
+title: "Home"
+description: "Alice Oldford — author and licensed real estate professional serving the Lake Placid, Florida area. Explore her books, real estate services, and upcoming events."
+og_type: "website"
+og_image: "/assets/images/og-home.jpg"
 breadcrumbs:
   - label: "Home"
+    url:   "/"
 ---
 
-<section class="home-hero">
-  <div class="home-hero__image-wrap">
-    <img
-      src="{{ site.baseurl }}/assets/images/hero-home.jpg"
-      alt="A classic boathouse at sunset on Lake Placid, Florida — golden light reflects across still water as dusk settles in."
-      width="1920"
-      height="1080"
-      loading="eager"
-      decoding="async"
-      class="home-hero__img"
-    >
-  </div>
-  <div class="home-hero__overlay">
-    <div class="container">
-      <p class="home-hero__eyebrow">Author · Adventurer · Realtor</p>
-      <h1 class="home-hero__title">Alice Oldford</h1>
-      <p class="home-hero__lead">
-        Guiding readers through Florida's wild places — and helping families
-        find their place in beautiful Lake Placid.
-      </p>
-      <div class="home-hero__actions">
-        <a href="{{ site.baseurl }}/books.html" class="btn btn--primary">Explore the Books</a>
-        <a href="{{ site.baseurl }}/realestate.html" class="btn btn--outline">Real Estate</a>
-      </div>
-    </div>
-  </div>
-</section>
+{% include breadcrumbs.html %}
 
-<section class="home-about">
-  <div class="container home-about__grid">
-    <div class="home-about__text">
-      <span class="section-eyebrow">About Alice</span>
-      <h2 class="section-title">Writer, Realtor,<br>Florida Native at Heart</h2>
-      <div class="prose">
-        <p>
-          Alice Oldford wears many hats — author, adventurer, herbalist,
-          wife, mother, grandmother, and licensed Associate Real Estate Broker.
-          She has called Lake Placid, Florida home for decades and knows its
-          landscapes, waterways, and communities better than almost anyone.
-        </p>
-        <p>
-          Her books bring Florida's outdoor treasures to life for hikers,
-          paddlers, and curious explorers. Her real estate practice, built on
-          more than 25 years of experience, is guided by a simple belief:
-          <em>"I don't sell homes. I help people realize their real estate dreams."</em>
-        </p>
-      </div>
-      <a href="{{ site.baseurl }}/contact.html" class="btn btn--outline" style="margin-top: var(--space-6);">
-        Get in Touch
-      </a>
-    </div>
-    <div class="home-about__aside">
-      <div class="home-about__photo-placeholder" aria-label="Photo of Alice Oldford" role="img">
-        <span class="home-about__photo-initials" aria-hidden="true">AO</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="home-books">
+<!-- ============================================================
+     HERO
+     Replace the placeholder text below with Alice's real copy.
+============================================================ -->
+<section class="home-hero" aria-labelledby="hero-heading">
   <div class="container">
-    <span class="section-eyebrow">Latest Book</span>
-    <h2 class="section-title">10 Adventures and More in<br>Lee &amp; Collier Counties</h2>
-    <div class="home-books__card card">
-      <div class="home-books__card-body">
-        <p class="home-books__subtitle">Florida on Land and Water</p>
-        <div class="prose">
-          <p>
-            Where can you enjoy an active outdoor experience in bustling Lee and
-            Collier Counties? Alice answers that question with first-hand trail
-            guides, paddling routes, and hidden natural gems across Southwest Florida —
-            written for adventurers of every fitness level.
-          </p>
+    <div class="home-hero__inner">
+
+      <div class="home-hero__text">
+        <p class="home-hero__label">Author &amp; Real Estate Professional</p>
+        <h1 class="home-hero__title" id="hero-heading">
+          Alice Oldford
+        </h1>
+        <p class="home-hero__lead">
+          <!-- REPLACE: One or two sentences about Alice — who she is, what she does, what makes her distinct. -->
+          Storyteller, community advocate, and trusted real estate professional in the heart of the Florida Highlands.
+        </p>
+        <div class="home-hero__actions">
+          <a class="btn btn--primary" href="/books.html">Explore the Books</a>
+          <a class="btn btn--outline" href="/contact.html">Get in Touch</a>
         </div>
-        <a href="{{ site.baseurl }}/books.html" class="btn btn--primary" style="margin-top: var(--space-5);">See All Books</a>
       </div>
-      <div class="home-books__cover-placeholder" aria-label="Book cover" role="img">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.5" aria-hidden="true"
-             style="color: var(--color-primary-highlight);">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-        </svg>
+
+      <div class="home-hero__image-wrap" aria-hidden="true">
+        <!-- REPLACE src with Alice's actual headshot or a chosen photo -->
+        <img
+          class="home-hero__image"
+          src="/assets/images/alice-hero.jpg"
+          alt="Alice Oldford, author and real estate professional"
+          width="480"
+          height="560"
+          loading="eager"
+        >
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="home-realestate">
-  <div class="container home-realestate__inner">
-    <div class="home-realestate__text">
-      <span class="section-eyebrow" style="color: var(--color-text-inverse); opacity: 0.7;">Real Estate</span>
-      <h2 class="home-realestate__title">Lake Placid, Florida</h2>
-      <p class="home-realestate__body">
-        Associate Real Estate Broker · Century 21 Lake &amp; Land Myers Realty ·
-        25+ years of experience serving Highlands County and the surrounding area.
+<!-- ============================================================
+     INTRODUCTION / ABOUT SNIPPET
+============================================================ -->
+<section class="home-intro page-content" aria-labelledby="intro-heading">
+  <div class="container container--narrow">
+    <h2 class="section-title" id="intro-heading">Welcome</h2>
+    <div class="prose">
+      <p>
+        <!-- REPLACE: A short welcoming paragraph in Alice's voice. 3–5 sentences. -->
+        Welcome to my little corner of the internet. Whether you picked up one of my books, are looking for your next home in the Highlands, or just stumbled in — I'm glad you're here.
+      </p>
+      <p>
+        <!-- REPLACE: Second paragraph — expand on her dual life as author and realtor. -->
+        I've spent years writing about the people and places I love, and just as many years helping families find their place in this beautiful part of Florida. Both callings ask the same thing of me: listen carefully and tell the truth.
+      </p>
+      <p>
+        <a href="/books.html">Browse my books</a> or <a href="/realestate.html">learn about real estate services</a> — or keep scrolling for a quick look at everything on offer.
       </p>
     </div>
-    <a href="{{ site.baseurl }}/realestate.html" class="btn btn--outline home-realestate__cta">Work With Alice</a>
   </div>
 </section>
 
-<section class="home-links">
+<!-- ============================================================
+     FEATURE CARDS — quick links to key sections
+============================================================ -->
+<section class="home-features" aria-labelledby="features-heading">
   <div class="container">
-    <h2 class="section-title">More From Alice</h2>
-    <ul class="home-links__grid" role="list">
-      <li class="card home-links__item">
-        <h3 class="home-links__item-title">Events</h3>
-        <p class="home-links__item-body card__body">
-          Book signings, speaking engagements, and community appearances —
-          find out where Alice will be next.
+    <h2 class="sr-only" id="features-heading">Site sections</h2>
+    <ul class="home-features__grid" role="list">
+
+      <li class="card home-feature-card">
+        <h3 class="card__title">
+          <a class="home-feature-card__link" href="/books.html">Books</a>
+        </h3>
+        <p class="card__body">
+          <!-- REPLACE: One sentence describing Alice's body of work. -->
+          Fiction, memoir, and local history — stories rooted in Florida's Heartland.
         </p>
-        <a href="{{ site.baseurl }}/events.html" class="home-links__item-link">View Events &#x2192;</a>
       </li>
-      <li class="card home-links__item">
-        <h3 class="home-links__item-title">Pictures &amp; Links</h3>
-        <p class="home-links__item-body card__body">
-          Photos from the trail, favourite Florida resources, and links
-          Alice recommends for outdoor enthusiasts.
+
+      <li class="card home-feature-card">
+        <h3 class="card__title">
+          <a class="home-feature-card__link" href="/realestate.html">Real Estate</a>
+        </h3>
+        <p class="card__body">
+          <!-- REPLACE: One sentence on her real estate specialty. -->
+          Helping buyers and sellers navigate the Lake Placid and Highlands County market with honesty and experience.
         </p>
-        <a href="{{ site.baseurl }}/pictures.html" class="home-links__item-link">Browse Photos &#x2192;</a>
       </li>
-      <li class="card home-links__item">
-        <h3 class="home-links__item-title">Newsletter Archive</h3>
-        <p class="home-links__item-body card__body">
-          Download past issues of Alice's newsletter — full of trail tips,
-          local news, and real estate insights.
+
+      <li class="card home-feature-card">
+        <h3 class="card__title">
+          <a class="home-feature-card__link" href="/events.html">Events</a>
+        </h3>
+        <p class="card__body">
+          <!-- REPLACE: One sentence on upcoming appearances or signings. -->
+          Book signings, speaking engagements, and community events — see what's coming up.
         </p>
-        <a href="{{ site.baseurl }}/archive.html" class="home-links__item-link">Open Archive &#x2192;</a>
       </li>
+
+      <li class="card home-feature-card">
+        <h3 class="card__title">
+          <a class="home-feature-card__link" href="/archive.html">Newsletter Archive</a>
+        </h3>
+        <p class="card__body">
+          <!-- REPLACE: One sentence on the newsletter archive. -->
+          Years of real estate insights and local news, all available as downloadable PDFs.
+        </p>
+      </li>
+
     </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT STRIP — simple CTA at the bottom
+============================================================ -->
+<section class="home-contact-strip" aria-labelledby="contact-strip-heading">
+  <div class="container container--narrow">
+    <h2 class="home-contact-strip__title" id="contact-strip-heading">Let's connect</h2>
+    <p class="home-contact-strip__body">
+      <!-- REPLACE: A warm invitation to reach out. -->
+      Questions about a book, a property, or just want to say hello? I'd love to hear from you.
+    </p>
+    <a class="btn btn--primary" href="/contact.html">Contact Alice</a>
   </div>
 </section>
