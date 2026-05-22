@@ -18,28 +18,31 @@
       <p class="site-footer__copy">
         &copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. All rights reserved.
       </p>
-      <p class="site-footer__credit">
-        <span class="site-footer__credit-label">Site by</span>
+
+      <!-- Site credit: text label + rounded logo pill -->
+      <div class="site-footer__credit">
+        <span class="site-footer__credit-label">Site by &mdash; Obsidian Peak Holdings LLC</span>
         <a
           href="https://obsidianpeakholdingsllc.com"
           class="site-footer__credit-link"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Website designed and built by Obsidian Peak Holdings"
+          aria-label="Visit Obsidian Peak Holdings LLC"
         >
-          <span class="site-footer__credit-logo-wrap" aria-hidden="true">
+          <span class="site-footer__credit-logo-wrap">
             <img
               src="{{ site.baseurl }}/assets/images/Obsidian_Peak_Logo_Footer.png"
-              alt=""
-              width="150"
-              height="50"
+              alt="Obsidian Peak Holdings LLC logo"
+              width="300"
+              height="150"
               loading="lazy"
               decoding="async"
               class="site-footer__credit-logo"
             >
           </span>
         </a>
-      </p>
+      </div>
+
     </div>
 
   </div>
