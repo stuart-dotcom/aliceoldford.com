@@ -55,13 +55,13 @@ breadcrumbs:
         <div class="carousel__stage">
 
           <div class="carousel__slide" data-index="0">
-            <img src="{{ site.baseurl }}/assets/images/Alice at spruce Run2.webp"
+            <img src="{{ site.baseurl }}/assets/images/Alice%20at%20Spruce%20Run2.webp"
               alt="Alice Oldford hiking at Spruce Run Recreation Area in New Jersey, a reservoir park popular with outdoor enthusiasts"
               width="900" height="600" loading="eager" decoding="async">
           </div>
 
           <div class="carousel__slide" data-index="1">
-            <img src="{{ site.baseurl }}/assets/images/Alice&Sue-ColumbiaTrail.webp"
+            <img src="{{ site.baseurl }}/assets/images/Alice%26Sue-ColumbiaTrail.webp"
               alt="Alice and co-author Sue Dziamara walking the Columbia Trail, a converted rail-trail through Hunterdon County, New Jersey"
               width="900" height="600" loading="lazy" decoding="async">
           </div>
@@ -337,8 +337,6 @@ breadcrumbs:
     position: absolute;
     inset: 0;
     opacity: 0;
-    /* NO transition here — transition is added by JS only to the
-       outgoing and incoming slides, preventing simultaneous blend */
     pointer-events: none;
   }
 
@@ -489,15 +487,14 @@ breadcrumbs:
   var iconPause = btnPause.querySelector('.icon-pause');
   var iconPlay  = btnPause.querySelector('.icon-play');
 
-  var TOTAL    = slides.length;  /* 24 */
-  var INTERVAL = 5000;           /* 5 seconds */
-  var FADE_MS  = 600;            /* must match CSS transition duration */
+  var TOTAL    = slides.length;
+  var INTERVAL = 5000;
+  var FADE_MS  = 600;
   var current  = 0;
   var paused   = false;
   var timer    = null;
-  var busy     = false;          /* lock during transition to prevent double-fire */
+  var busy     = false;
 
-  /* ── Build dot buttons ── */
   slides.forEach(function (_, i) {
     var dot = document.createElement('button');
     dot.className = 'carousel__dot';
@@ -508,7 +505,6 @@ breadcrumbs:
 
   var dots = Array.from(dotsWrap.querySelectorAll('.carousel__dot'));
 
-  /* ── Render active state immediately (no transition) ── */
   function renderInstant(index) {
     slides.forEach(function (s, i) {
       s.classList.remove('is-active', 'is-transitioning');
@@ -520,10 +516,6 @@ breadcrumbs:
     counter.textContent = (index + 1) + ' / ' + TOTAL;
   }
 
-  /* ── Crossfade to a new slide ──
-     Strategy: make next slide visible beneath current (opacity 0, z-index 0),
-     add transition class to current (fade out), then after fade completes
-     snap next to active cleanly. No simultaneous blend. */
   function goTo(index, userAction) {
     if (busy || index === current) return;
     busy = true;
@@ -534,28 +526,22 @@ breadcrumbs:
     var outgoing = slides[prev];
     var incoming = slides[current];
 
-    /* Position incoming behind outgoing, fully transparent */
     incoming.style.opacity = '0';
     incoming.style.zIndex  = '0';
     incoming.classList.add('is-active');
     incoming.classList.remove('is-transitioning');
 
-    /* Fade out the outgoing slide */
     outgoing.classList.add('is-transitioning');
-    /* Tiny rAF delay ensures the browser registers the initial state */
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
         outgoing.style.opacity = '0';
         outgoing.style.zIndex  = '0';
-
-        /* Fade in the incoming slide */
         incoming.classList.add('is-transitioning');
         incoming.style.zIndex  = '1';
         incoming.style.opacity = '1';
       });
     });
 
-    /* After the transition, clean up inline styles */
     setTimeout(function () {
       outgoing.classList.remove('is-active', 'is-transitioning');
       outgoing.style.opacity = '';
@@ -566,7 +552,6 @@ breadcrumbs:
       busy = false;
     }, FADE_MS + 50);
 
-    /* Update dots + counter immediately */
     dots.forEach(function (d, i) {
       d.classList.toggle('is-active', i === current);
     });
@@ -578,7 +563,6 @@ breadcrumbs:
   function next() { goTo(current + 1, false); }
   function prev() { goTo(current - 1, false); }
 
-  /* ── Auto-advance ── */
   function startTimer() {
     stopTimer();
     timer = setInterval(next, INTERVAL);
@@ -588,7 +572,6 @@ breadcrumbs:
     if (timer) { clearInterval(timer); timer = null; }
   }
 
-  /* ── Pause / play toggle ── */
   function setPaused(state) {
     paused = state;
     btnPause.setAttribute('aria-pressed', paused ? 'true' : 'false');
@@ -602,14 +585,12 @@ breadcrumbs:
   btnNext.addEventListener('click',  function () { next(); if (!paused) startTimer(); });
   btnPause.addEventListener('click', function () { setPaused(!paused); });
 
-  /* ── Keyboard support ── */
   document.querySelector('.carousel').addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft')  { prev(); if (!paused) startTimer(); }
     if (e.key === 'ArrowRight') { next(); if (!paused) startTimer(); }
     if (e.key === ' ')          { setPaused(!paused); e.preventDefault(); }
   });
 
-  /* ── Touch / swipe ── */
   var touchStartX = 0;
   document.querySelector('.carousel__stage').addEventListener('touchstart', function (e) {
     touchStartX = e.touches[0].clientX;
@@ -620,7 +601,6 @@ breadcrumbs:
     if (!paused) startTimer();
   }, { passive: true });
 
-  /* ── Init ── */
   renderInstant(0);
   startTimer();
 
