@@ -30,15 +30,18 @@
           aria-label="Visit Obsidian Peak Holdings LLC"
         >
           <span class="site-footer__credit-logo-wrap">
-            <img
-              src="{{ site.baseurl }}/assets/images/Obsidian_Peak_Logo_Footer.png"
-              alt="Obsidian Peak Holdings LLC logo"
-              width="300"
-              height="150"
-              loading="lazy"
-              decoding="async"
-              class="site-footer__credit-logo"
-            >
+            <picture>
+              <source srcset="{{ site.baseurl }}/assets/images/Obsidian_Peak_Logo_Footer.webp" type="image/webp">
+              <img
+                src="{{ site.baseurl }}/assets/images/Obsidian_Peak_Logo_Footer.png"
+                alt="Obsidian Peak Holdings LLC logo"
+                width="300"
+                height="150"
+                loading="lazy"
+                decoding="async"
+                class="site-footer__credit-logo"
+              >
+            </picture>
           </span>
         </a>
       </div>
