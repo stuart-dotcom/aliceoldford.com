@@ -15,39 +15,80 @@ breadcrumbs:
     <p class="page-hero__label">Lake Placid, Florida</p>
     <h1 class="page-hero__title">Real Estate with Alice</h1>
     <p class="page-hero__lead">
-      Associate Real Estate Broker ·
-      <a href="https://century21lakeandlandmyersrealty.com/" target="_blank" rel="noopener noreferrer">Century 21 Lake &amp; Land Myers Realty</a> ·
+      Associate Real Estate Broker &middot;
+      Century 21 Lake &amp; Land Myers Realty &middot;
       More than 35 years helping buyers and sellers in Highlands County and beyond.
     </p>
   </div>
 </section>
 
+<section class="books-hero-banner">
+  <picture>
+    <source srcset="{{ site.baseurl }}/assets/images/Real_Estate_Hero_Image.webp" type="image/webp">
+    <img
+      src="{{ site.baseurl }}/assets/images/Real_Estate_Hero_Image.jpg"
+      alt="A scenic lakefront view in Lake Placid, Florida representing the real estate opportunities Alice Oldford helps clients find"
+      width="1200"
+      height="480"
+      loading="eager"
+      decoding="async"
+      class="books-hero-banner__img"
+    >
+  </picture>
+</section>
+
 <section class="page-content">
   <div class="container">
 
-    <div class="realestate-intro prose">
-      <h2>A Different Kind of Real Estate Experience</h2>
-      <p>
-        Alice doesn't just list properties — she listens. Her philosophy is simple:
-        <em>"I don't sell homes. I help people realize their real estate dreams."</em>
-        Whether you are buying your first home, searching for a lakefront retreat, or
-        ready to sell and move on to your next chapter, Alice brings decades of local
-        knowledge and genuine care to every transaction.<em>"Buy land, they're not making it anymoore." - Mark Twain</em>
-      </p>
-      <h2>Why Lake Placid?</h2>
-      <p>
-        Nestled in the heart of Highlands County, Lake Placid is one of Florida's
-        best-kept secrets — a small town surrounded by lakes, trails, and wide-open
-        natural beauty. Alice has lived and worked here for decades and knows every
-        neighbourhood, every waterway, and every opportunity the area has to offer.
-        Discover everything the area has to offer at the
-        <a href="https://visitsebring.com/" target="_blank" rel="noopener noreferrer">official Highlands County visitor guide</a>.
-      </p>
-      <p>
-        For nature lovers, the area is home to the
-        <a href="https://highlandsaudubon.org/" target="_blank" rel="noopener noreferrer">Highlands County Audubon Society</a> —
-        a testament to the extraordinary wildlife and natural environment that makes this region so special.
-      </p>
+    <div class="realestate-intro">
+      <div class="realestate-intro__text prose">
+        <h2>A Different Kind of Real Estate Experience</h2>
+        <p>
+          Alice doesn&rsquo;t just list properties &mdash; she listens. Her philosophy is simple:
+          <em>&ldquo;I don&rsquo;t sell homes. I help people realize their real estate dreams.&rdquo;</em>
+          Whether you are buying your first home, searching for a lakefront retreat, or
+          ready to sell and move on to your next chapter, Alice brings decades of local
+          knowledge and genuine care to every transaction.
+        </p>
+        <p><em>&ldquo;Buy land, they&rsquo;re not making it anymore.&rdquo; &mdash; Mark Twain</em></p>
+        <h2>Why Lake Placid?</h2>
+        <p>
+          Nestled in the heart of Highlands County, Lake Placid is one of Florida&rsquo;s
+          best-kept secrets &mdash; a small town surrounded by lakes, trails, and wide-open
+          natural beauty. Alice has lived and worked here for decades and knows every
+          neighbourhood, every waterway, and every opportunity the area has to offer.
+          Discover everything the area has to offer at the
+          <a href="https://visitsebring.com/" target="_blank" rel="noopener noreferrer">official Highlands County visitor guide</a>.
+        </p>
+        <p>
+          For nature lovers, the area is home to the
+          <a href="https://highlandsaudubon.org/" target="_blank" rel="noopener noreferrer">Highlands County Audubon Society</a> &mdash;
+          a testament to the extraordinary wildlife and natural environment that makes this region so special.
+        </p>
+      </div>
+
+      <div class="realestate-intro__logo">
+        <a
+          href="https://century21lakeandlandmyersrealty.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="c21-logo-link"
+          aria-label="Visit Century 21 Lake and Land Myers Realty website"
+        >
+          <picture>
+            <source srcset="{{ site.baseurl }}/assets/images/C_21_Circular_logo.webp" type="image/webp">
+            <img
+              src="{{ site.baseurl }}/assets/images/C_21_Circular_logo.png"
+              alt="Century 21 Lake and Land Myers Realty logo"
+              width="220"
+              height="220"
+              loading="lazy"
+              decoding="async"
+              class="c21-logo-img"
+            >
+          </picture>
+        </a>
+      </div>
     </div>
 
     <div class="realestate-services">
@@ -59,7 +100,7 @@ breadcrumbs:
         </li>
         <li class="card realestate-services__item">
           <h3>Selling</h3>
-          <p>Strategic pricing, local market knowledge, and a personal touch that gets homes sold — without the pressure.</p>
+          <p>Strategic pricing, local market knowledge, and a personal touch that gets homes sold &mdash; without the pressure.</p>
         </li>
         <li class="card realestate-services__item">
           <h3>Relocation</h3>
@@ -71,11 +112,73 @@ breadcrumbs:
     <div class="realestate-cta">
       <h2 class="section-title">Ready to Talk?</h2>
       <p class="prose">
-        There's no obligation and no pressure. Alice is happy to answer questions,
-        share market insights, or simply have a conversation about what you're looking for.
+        There&rsquo;s no obligation and no pressure. Alice is happy to answer questions,
+        share market insights, or simply have a conversation about what you&rsquo;re looking for.
       </p>
       <a href="{{ site.baseurl }}/contact/" class="btn btn--primary" style="margin-top: var(--space-6);">Contact Alice</a>
     </div>
 
   </div>
 </section>
+
+<style>
+  /* ── Real Estate intro: two-column layout ── */
+  .realestate-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+  }
+
+  .realestate-intro__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .realestate-intro__logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: var(--space-4);
+  }
+
+  /* ── C21 logo: teal glow to mask soft edges ── */
+  .c21-logo-link {
+    display: inline-block;
+    border-radius: 50%;
+    transition: box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .c21-logo-img {
+    display: block;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 4px var(--color-bg),
+      0 0 18px 8px oklch(0.55 0.12 192 / 0.55),
+      0 0 38px 16px oklch(0.55 0.12 192 / 0.28);
+  }
+
+  .c21-logo-link:hover .c21-logo-img,
+  .c21-logo-link:focus-visible .c21-logo-img {
+    box-shadow:
+      0 0 0 4px var(--color-bg),
+      0 0 24px 12px oklch(0.55 0.12 192 / 0.75),
+      0 0 52px 24px oklch(0.55 0.12 192 / 0.40);
+    transform: scale(1.03);
+  }
+
+  /* ── Responsive: stack on smaller screens ── */
+  @media (max-width: 768px) {
+    .realestate-intro {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .realestate-intro__logo {
+      padding-top: 0;
+      order: -1;
+    }
+  }
+</style>
