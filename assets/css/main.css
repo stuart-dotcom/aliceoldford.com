@@ -1708,3 +1708,5 @@ a.contact-details__value:hover {
     margin-top: var(--space-2);
   }
 }
+.books-hero-banner { margin-bottom: var(--space-8); }
+.books-hero-banner__img { width: 100%; height: auto; display: block; }
