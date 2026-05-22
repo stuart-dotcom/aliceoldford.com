@@ -205,7 +205,7 @@ main { flex: 1; }
   color: var(--color-text-faint);
 }
 
-/* "Site by" credit — deliberately understated */
+/* "Site by" credit — present but subordinate */
 .site-footer__credit {
   display: flex;
   align-items: center;
@@ -222,20 +222,33 @@ main { flex: 1; }
 .site-footer__credit-link {
   display: flex;
   align-items: center;
-  opacity: 0.45;
+  opacity: 0.85;
   transition: opacity var(--transition);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-full);
+  text-decoration: none;
 }
 
 .site-footer__credit-link:hover {
-  opacity: 0.75;
+  opacity: 1;
+}
+
+/* Pill-shaped clip wrapper — clips the rectangular white
+   background of the PNG into a rounded pill shape */
+.site-footer__credit-logo-wrap {
+  display: block;
+  width: 130px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: #ffffff;
+  flex-shrink: 0;
 }
 
 .site-footer__credit-logo {
-  width: auto;
-  max-width: 100px;
-  height: 28px;
+  width: 130px;
+  height: 44px;
   object-fit: contain;
+  object-position: center;
   display: block;
 }
 
