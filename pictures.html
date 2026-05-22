@@ -21,62 +21,262 @@ breadcrumbs:
   </div>
 </section>
 
+<section class="books-hero-banner">
+  <picture>
+    <source srcset="{{ site.baseurl }}/assets/images/Pictures_and_Links_Hero_Image.webp" type="image/webp">
+    <img
+      src="{{ site.baseurl }}/assets/images/Pictures_and_Links_Hero_Image.jpg"
+      alt="A scenic outdoor trail scene representing Alice Oldford's adventures and the natural beauty she explores and photographs"
+      width="1200"
+      height="480"
+      loading="eager"
+      decoding="async"
+      class="books-hero-banner__img"
+    >
+  </picture>
+</section>
+
 <section class="page-content">
   <div class="container">
 
-    <!-- ── PHOTOS ─────────────────────────────────────────── -->
+    <!-- ── PHOTO CAROUSEL ─────────────────────────────────── -->
     <div class="pictures-section">
       <h2 class="section-title">Photos</h2>
-      <p class="prose" style="margin-bottom: var(--space-8); color: var(--color-text-muted);">
-        Photos from Alice's adventures across Florida — coming soon.
+      <p class="prose" style="margin-bottom: var(--space-6); color: var(--color-text-muted);">
+        Adventures on the trail &mdash; from New Jersey&rsquo;s Hunterdon County waterways
+        to hidden gems across the Northeast. Scroll through, or pause and linger on a favourite.
       </p>
-      <ul class="pictures-grid" role="list">
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-        <li class="pictures-grid__item pictures-grid__placeholder" aria-label="Photo placeholder"></li>
-      </ul>
+
+      <div class="carousel" role="region" aria-label="Trail photo gallery" aria-live="polite">
+        <div class="carousel__track-wrap">
+          <ul class="carousel__track" role="list">
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/Alice at spruce Run2.webp"
+                alt="Alice Oldford hiking at Spruce Run Recreation Area in New Jersey, a reservoir park popular with outdoor enthusiasts"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/Alice&Sue-ColumbiaTrail.webp"
+                alt="Alice and co-author Sue Dziamara walking the Columbia Trail, a converted rail-trail through Hunterdon County, New Jersey"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/Alice-rainywalk.webp"
+                alt="Alice Oldford on a rainy day hike, capturing the quiet beauty of the trail in wet weather"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/arboretum.webp"
+                alt="A peaceful path winding through the Arboretum in Hunterdon County, lined with mature trees and seasonal plantings"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/arboretum2.webp"
+                alt="Open meadow and tree canopy at the Arboretum, a family-friendly hiking destination in New Jersey"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/arboretum3.webp"
+                alt="Autumn foliage reflected in a still pond at the Arboretum, showcasing the seasonal beauty of New Jersey trails"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/authors.webp"
+                alt="Alice Oldford with fellow authors at a literary event, celebrating the community of writers in the region"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/background16.webp"
+                alt="A sweeping natural landscape from one of Alice's outdoor adventures, featuring open sky and rolling terrain"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/bridge.webp"
+                alt="A wooden footbridge crossing a stream on a wooded hiking trail, inviting explorers to venture further"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/columbiatrail-clydesdales.webp"
+                alt="Clydesdale horses encountered along the Columbia Trail in Hunterdon County, New Jersey &mdash; a memorable trail surprise"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/CoopersMillBlackRiver.webp"
+                alt="The Black River flowing through Cooper's Mill in Morris County, New Jersey &mdash; a historic mill site along a scenic trail"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/cushetunk.webp"
+                alt="Views from Cushetunk Mountain in Hunterdon County, New Jersey, offering panoramic vistas over the surrounding countryside"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/CushetunkConnector.webp"
+                alt="The Cushetunk Connector trail through forested terrain, linking key sections of the Cushetunk Mountain preserve"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/HacklebarneyBlackRiverTrail.webp"
+                alt="The Black River gorge at Hacklebarney State Park in New Jersey, where rocky terrain meets rushing water along a dramatic trail"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/Loons.webp"
+                alt="Common loons resting on a glassy lake &mdash; a wildlife sighting that rewards patient and quiet trail explorers"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/MiquinWoodsBridge.webp"
+                alt="A rustic trail bridge at Miquin Woods in Hunterdon County, spanning a narrow creek through dense woodland"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/MusconetcongRiverGorge.webp"
+                alt="The Musconetcong River Gorge in New Jersey, a scenic stretch of river valley carved through the Highlands landscape"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/MusconetcongRiverGorgeClimb.webp"
+                alt="A steep rocky climb above the Musconetcong River Gorge, rewarding hikers with elevated views of the river and valley below"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/RestoredUnionForgeHeritageBridge5.webp"
+                alt="The restored Union Forge Heritage Bridge in Hunterdon County &mdash; a beautifully preserved historic crossing on the trail network"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/Shores-LakeSolitude.webp"
+                alt="The tranquil shoreline of Lake Solitude in Hunterdon County, where calm water meets tree-lined banks on a peaceful hiking loop"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/SolitudeHouse-LakeSolitude.webp"
+                alt="The historic Solitude House beside Lake Solitude, a landmark that adds cultural depth to an already beautiful natural setting"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/SteppingStones-MiquinWoods.webp"
+                alt="Stepping stones crossing a stream at Miquin Woods, a playful and scenic trail feature in Hunterdon County, New Jersey"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/sunnyside.webp"
+                alt="Sunnyside trail in Hunterdon County near the 9-11 Memorial &mdash; a reflective walk along the river ideal for quiet contemplation"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+            <li class="carousel__slide">
+              <img src="{{ site.baseurl }}/assets/images/TISCOofficeBuilding.webp"
+                alt="The historic TISCO office building, a landmark of industrial heritage along the trail corridor in New Jersey"
+                width="900" height="600" loading="lazy" decoding="async">
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Controls -->
+        <div class="carousel__controls" role="group" aria-label="Carousel controls">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Previous photo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button class="carousel__btn carousel__btn--pause" aria-label="Pause slideshow" aria-pressed="false">
+            <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+            </svg>
+            <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Next photo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="carousel__dots" role="tablist" aria-label="Photo slides"></div>
+
+        <!-- Slide counter -->
+        <p class="carousel__counter" aria-live="polite" aria-atomic="true"></p>
+      </div>
     </div>
 
     <!-- ── LOCAL COMMUNITY & ORGANISATIONS ───────────────── -->
     <div class="links-section">
       <h2 class="section-title">Local Community &amp; Organisations</h2>
       <p class="prose" style="margin-bottom: var(--space-6); color: var(--color-text-muted);">Places and organisations Alice is proud to support in the Lake Placid area.</p>
-      <ul class="links-list" role="list">
-        <li class="links-list__item">
-          <a href="https://tourlakeplacid.com/murals/" class="links-list__link" target="_blank" rel="noopener noreferrer">
-            Lake Placid Mural Society
-          </a>
-          <p class="links-list__desc">Celebrating Lake Placid's world-famous outdoor mural collection.</p>
-        </li>
-        <!-- Miss Potter's Place is located in Fort Myers, not Lake Placid.
-             Confirm with Alice whether she wants it listed under a broader
-             "Southwest Florida" section before restoring this entry.
-        <li class="links-list__item">
-          <a href="https://misspottersplace.com/" class="links-list__link" target="_blank" rel="noopener noreferrer">
-            Miss Potter's Place
-          </a>
-          <p class="links-list__desc">A beloved destination in Fort Myers, Florida.</p>
-        </li>
-        -->
-        <!-- Lake Placid Garden Club: link pending — domain is currently parked.
-             Restore this entry once a new URL is confirmed with Alice.
-        <li class="links-list__item">
-          <a href="" class="links-list__link" target="_blank" rel="noopener noreferrer">
-            Lake Placid Garden Club
-          </a>
-          <p class="links-list__desc">Alice is a member of the Lake Placid Garden Club.</p>
-        </li>
-        -->
-      </ul>
+
+      <!-- Mural Society + photo -->
+      <div class="community-mural">
+        <div class="community-mural__text">
+          <ul class="links-list" role="list">
+            <li class="links-list__item">
+              <a href="https://tourlakeplacid.com/murals/" class="links-list__link" target="_blank" rel="noopener noreferrer">
+                Lake Placid Mural Society
+              </a>
+              <p class="links-list__desc">Celebrating Lake Placid&rsquo;s world-famous outdoor mural collection &mdash; over 50 hand-painted murals that have earned the town the nickname &ldquo;The Caladium Capital of the World.&rdquo;</p>
+            </li>
+            <li class="links-list__item" style="margin-top: var(--space-6);">
+              <a href="https://lakeplacidgardenclub.org/" class="links-list__link" target="_blank" rel="noopener noreferrer">
+                Lake Placid Garden Club
+              </a>
+              <p class="links-list__desc">
+                The Lake Placid Garden Club has beautified and enriched the community for generations &mdash; planting public gardens, funding civic improvements, and fostering a love of horticulture among residents of all ages. Alice is a proud member and supporter of the club&rsquo;s ongoing mission to keep Lake Placid blooming.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="community-mural__photo">
+          <figure class="mural-figure">
+            <picture>
+              <source srcset="{{ site.baseurl }}/assets/images/mural1.webp" type="image/webp">
+              <img
+                src="{{ site.baseurl }}/assets/images/mural1.jpg"
+                alt="A vibrant outdoor mural in Lake Placid, Florida, painted by local artist Keith Goodson &mdash; part of the town's celebrated collection of more than 50 hand-painted murals"
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+                class="mural-figure__img"
+              >
+            </picture>
+            <figcaption class="mural-figure__caption">Mural by Keith Goodson &mdash; Lake Placid, Florida</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
 
     <!-- ── NATURE & OUTDOOR RESOURCES ────────────────────── -->
     <div class="links-section">
       <h2 class="section-title">Nature &amp; Outdoor Resources</h2>
-      <p class="prose" style="margin-bottom: var(--space-6); color: var(--color-text-muted);">Alice's recommended resources for outdoor explorers and nature lovers.</p>
+      <p class="prose" style="margin-bottom: var(--space-6); color: var(--color-text-muted);">Alice&rsquo;s recommended resources for outdoor explorers and nature lovers.</p>
       <ul class="links-list" role="list">
         <li class="links-list__item">
           <a href="https://highlandsaudubon.org/" class="links-list__link" target="_blank" rel="noopener noreferrer">
@@ -94,13 +294,21 @@ breadcrumbs:
           <a href="https://www.sloughpreserve.org/" class="links-list__link" target="_blank" rel="noopener noreferrer">
             Six Mile Cypress Slough Preserve
           </a>
-          <p class="links-list__desc">A two-mile boardwalk through one of Southwest Florida's finest wetland ecosystems.</p>
+          <p class="links-list__desc">A two-mile boardwalk through one of Southwest Florida&rsquo;s finest wetland ecosystems.</p>
+        </li>
+        <li class="links-list__item">
+          <a href="https://misspottersplace.com/" class="links-list__link" target="_blank" rel="noopener noreferrer">
+            Miss Potter&rsquo;s Place
+          </a>
+          <p class="links-list__desc">
+            A beloved herbalist destination in Fort Myers, Florida &mdash; Miss Potter&rsquo;s Place is a haven for anyone passionate about medicinal plants, herbal remedies, and living in harmony with the natural world. A kindred spirit to Alice&rsquo;s own love of nature and holistic living.
+          </p>
         </li>
         <li class="links-list__item">
           <a href="https://pinelandfarms.org/" class="links-list__link" target="_blank" rel="noopener noreferrer">
             Pineland Farms
           </a>
-          <p class="links-list__desc">New Gloucester, Maine — agricultural heritage and outdoor education.</p>
+          <p class="links-list__desc">New Gloucester, Maine &mdash; agricultural heritage and outdoor education.</p>
         </li>
         <li class="links-list__item">
           <a href="https://www.theunrulygardener.com/" class="links-list__link" target="_blank" rel="noopener noreferrer">
@@ -113,11 +321,11 @@ breadcrumbs:
 
     <!-- ── ALICE'S BLOG ───────────────────────────────────── -->
     <div class="links-section">
-      <h2 class="section-title">Follow Alice's Adventures</h2>
+      <h2 class="section-title">Follow Alice&rsquo;s Adventures</h2>
       <ul class="links-list" role="list">
         <li class="links-list__item">
           <a href="https://get-there-from-here-books.blogspot.com/" class="links-list__link" target="_blank" rel="noopener noreferrer">
-            Alice's Adventure Blog
+            Alice&rsquo;s Adventure Blog
           </a>
           <p class="links-list__desc">Ongoing trail dispatches, book updates, and Florida nature writing from Alice.</p>
         </li>
@@ -126,3 +334,275 @@ breadcrumbs:
 
   </div>
 </section>
+
+<!-- ── CAROUSEL STYLES ─────────────────────────────────────── -->
+<style>
+  .carousel {
+    position: relative;
+    margin-bottom: var(--space-12);
+    user-select: none;
+  }
+
+  .carousel__track-wrap {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-offset);
+    aspect-ratio: 3 / 2;
+    position: relative;
+  }
+
+  .carousel__track {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* JS sets transform */
+    will-change: transform;
+  }
+
+  .carousel__slide {
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
+    /* cross-fade transition */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Controls row */
+  .carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .carousel__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    border: 1px solid oklch(from var(--color-text) l c h / 0.12);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background var(--transition-interactive),
+                box-shadow var(--transition-interactive),
+                transform var(--transition-interactive);
+  }
+
+  .carousel__btn:hover {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .carousel__btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  .carousel__btn:active {
+    transform: scale(0.95);
+  }
+
+  /* Dot indicators */
+  .carousel__dots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    margin-top: var(--space-3);
+    padding: 0 var(--space-4);
+  }
+
+  .carousel__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: var(--color-border);
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--transition-interactive),
+                transform var(--transition-interactive);
+  }
+
+  .carousel__dot[aria-selected="true"] {
+    background: var(--color-primary);
+    transform: scale(1.35);
+  }
+
+  .carousel__dot:hover {
+    background: var(--color-primary-hover);
+  }
+
+  /* Counter */
+  .carousel__counter {
+    text-align: center;
+    margin-top: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  /* ── Community mural layout ── */
+  .community-mural {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-10);
+    margin-bottom: var(--space-8);
+  }
+
+  .community-mural__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .community-mural__photo {
+    flex: 0 0 auto;
+  }
+
+  .mural-figure {
+    margin: 0;
+  }
+
+  .mural-figure__img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+
+  .mural-figure__caption {
+    margin-top: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .community-mural {
+      flex-direction: column;
+    }
+
+    .community-mural__photo {
+      width: 100%;
+    }
+
+    .mural-figure__img {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<!-- ── CAROUSEL SCRIPT ─────────────────────────────────────── -->
+<script>
+(function () {
+  const track    = document.querySelector('.carousel__track');
+  const slides   = Array.from(track.querySelectorAll('.carousel__slide'));
+  const dotsWrap = document.querySelector('.carousel__dots');
+  const counter  = document.querySelector('.carousel__counter');
+  const btnPrev  = document.querySelector('.carousel__btn--prev');
+  const btnNext  = document.querySelector('.carousel__btn--next');
+  const btnPause = document.querySelector('.carousel__btn--pause');
+  const iconPause = btnPause.querySelector('.icon-pause');
+  const iconPlay  = btnPause.querySelector('.icon-play');
+
+  const TOTAL    = slides.length;
+  const INTERVAL = 2000;
+  let current    = 0;
+  let paused     = false;
+  let timer      = null;
+
+  /* ── Build dot buttons ── */
+  slides.forEach(function (_, i) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel__dot';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+    dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    dot.addEventListener('click', function () { goTo(i); });
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.querySelectorAll('.carousel__dot'));
+
+  /* ── Render ── */
+  function render() {
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    track.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+    dots.forEach(function (d, i) {
+      d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+    });
+    counter.textContent = (current + 1) + ' / ' + TOTAL;
+    document.querySelector('.carousel').setAttribute('aria-label', 'Trail photo gallery — photo ' + (current + 1) + ' of ' + TOTAL);
+  }
+
+  /* ── Navigation ── */
+  function goTo(index) {
+    current = (index + TOTAL) % TOTAL;
+    render();
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  /* ── Auto-advance ── */
+  function startTimer() {
+    stopTimer();
+    timer = setInterval(next, INTERVAL);
+  }
+
+  function stopTimer() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+
+  /* ── Pause / play ── */
+  function setPaused(state) {
+    paused = state;
+    btnPause.setAttribute('aria-pressed', paused ? 'true' : 'false');
+    btnPause.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+    iconPause.style.display = paused ? 'none' : '';
+    iconPlay.style.display  = paused ? ''     : 'none';
+    paused ? stopTimer() : startTimer();
+  }
+
+  btnPrev.addEventListener('click',  function () { prev(); if (!paused) startTimer(); });
+  btnNext.addEventListener('click',  function () { next(); if (!paused) startTimer(); });
+  btnPause.addEventListener('click', function () { setPaused(!paused); });
+
+  /* ── Keyboard support ── */
+  document.querySelector('.carousel').addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  { prev(); if (!paused) startTimer(); }
+    if (e.key === 'ArrowRight') { next(); if (!paused) startTimer(); }
+  });
+
+  /* ── Touch / swipe ── */
+  var touchStartX = 0;
+  track.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   function (e) {
+    var delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) { delta > 0 ? next() : prev(); }
+    if (!paused) startTimer();
+  }, { passive: true });
+
+  /* ── Init ── */
+  render();
+  startTimer();
+})();
+</script>
