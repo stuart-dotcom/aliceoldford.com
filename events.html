@@ -6,6 +6,7 @@ breadcrumbs:
   - label: "Home"
     url:   "/"
   - label: "Events"
+    url:   "/events/"
 ---
 
 {% include breadcrumbs.html %}
@@ -21,104 +22,120 @@ breadcrumbs:
   </div>
 </section>
 
-<!-- ── HERO BANNER ────────────────────────────────────────── -->
 <div class="books-hero-banner">
   <picture>
-    <source srcset="{{ site.baseurl }}/assets/images/Events_Book_Signing.webp" type="image/webp">
+    <source
+      srcset="{{ site.baseurl }}/assets/images/Events_Book_Signing.webp"
+      type="image/webp"
+    >
     <img
       src="{{ site.baseurl }}/assets/images/Events_Book_Signing.jpg"
-      alt="Alice Oldford at a book signing event, greeting readers and signing copies of her outdoor adventure guides"
+      alt="Alice Oldford greeting readers and signing books during a public appearance"
       width="1200"
       height="480"
       loading="eager"
       decoding="async"
       class="books-hero-banner__img"
-      style="display:block;width:100%;height:auto;"
     >
   </picture>
 </div>
 
 <section class="page-content">
   <div class="container">
-
     <div class="events-layout">
+      <main class="events-layout__content" id="main-content">
+        <section class="events-group" aria-labelledby="coming-up-title">
+          <h2 id="coming-up-title" class="section-title">Coming Up</h2>
 
-      <!-- ── LEFT COLUMN: all existing content ── -->
-      <div class="events-layout__content">
-
-        <!-- ── UPCOMING EVENTS ──────────────────────────────── -->
-        <div class="events-group">
-          <h2 class="section-title">Coming Up</h2>
           <ul class="events-list" role="list">
-            <li class="event-item">
-              <div class="event-item__date-block" aria-label="Date">
-                <span class="event-item__month">TBD</span>
-                <span class="event-item__day">&mdash;</span>
+            <li class="event-card">
+              <div class="event-card__date-block" aria-label="Date to be announced">
+                <span class="event-card__month">TBD</span>
+                <span class="event-card__day">&mdash;</span>
+                <span class="event-card__year">2026</span>
               </div>
-              <div class="event-item__body">
-                <h3 class="event-item__title">Events Coming Soon</h3>
-                <p class="event-item__location">Lake Placid, FL</p>
-                <p class="event-item__desc">
+
+              <div class="event-card__content">
+                <p class="event-card__type">Book signing &amp; speaking</p>
+                <h3 class="event-card__title">Events Coming Soon</h3>
+                <p class="event-card__location">Lake Placid, Florida</p>
+                <p class="event-card__desc">
                   Check back for upcoming book signings and appearances.
                   To request Alice for a speaking engagement or event,
-                  <a href="{{ site.baseurl }}/contact/">contact her here</a>.
+                  <a href="{{ site.baseurl }}/contact/">contact Alice</a>.
                 </p>
               </div>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <!-- ── IN THE PRESS ────────────────────────────────── -->
-        <div class="events-group">
-          <h2 class="section-title">In the Press</h2>
+        <section class="events-group" aria-labelledby="press-title">
+          <h2 id="press-title" class="section-title">In the Press</h2>
+
           <ul class="press-list" role="list">
             <li class="press-item card">
               <div class="press-item__body">
                 <p class="press-item__outlet">Sebring Highland Sun</p>
                 <h3 class="press-item__headline">
-                  <a href="https://www.yoursun.com/sebring/around_town/local-author-receives-national-recognition/article_2c74321c-a626-11e8-a343-9b06bc2b851e.html"
-                     target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.yoursun.com/sebring/around_town/local-author-receives-national-recognition/article_2c74321c-a626-11e8-a343-9b06bc2b851e.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Local Author Receives National Recognition
                   </a>
                 </h3>
-                <p class="press-item__desc">Alice&rsquo;s award-winning book was featured in Sebring&rsquo;s Highland Sun newspaper, recognising her contribution to Florida outdoor literature.</p>
+                <p class="press-item__desc">
+                  Alice&rsquo;s award-winning book was featured in Sebring&rsquo;s Highland Sun
+                  newspaper, recognising her contribution to Florida outdoor literature.
+                </p>
               </div>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <!-- ── PAST EVENTS ───────────────────────────────────── -->
-        <div class="events-group events-group--past">
-          <h2 class="section-title">Past Events</h2>
+        <section class="events-group events-group--past" aria-labelledby="past-events-title">
+          <h2 id="past-events-title" class="section-title">Past Events</h2>
           <p class="prose" style="color: var(--color-text-muted);">
             Past appearances will be listed here. Check the
-            <a href="{{ site.baseurl }}/archive/">Newsletter Archive</a> for
-            recaps and photos from previous events.
+            <a href="{{ site.baseurl }}/archive/">Newsletter Archive</a>
+            for recaps and photos from previous events.
           </p>
-        </div>
+        </section>
 
-        <!-- ── INVITE ALICE ───────────────────────────────────── -->
-        <div class="events-invite card">
-          <h2 class="events-invite__title">Invite Alice to Your Event</h2>
+        <section class="events-invite card" aria-labelledby="invite-title">
+          <h2 id="invite-title" class="events-invite__title">Invite Alice to Your Event</h2>
           <p class="events-invite__body">
             Alice is available for book club visits, library talks, outdoor club
             presentations, and community events throughout Florida. She is a member of the
-            <a href="https://gulfcoastwriters.org/" target="_blank" rel="noopener noreferrer">Gulf Coast Writers Association</a>
+            <a href="https://gulfcoastwriters.org/" target="_blank" rel="noopener noreferrer">
+              Gulf Coast Writers Association
+            </a>
             and welcomes invitations from literary organisations and outdoor clubs alike.
           </p>
-          <a href="{{ site.baseurl }}/contact/" class="btn btn--primary" style="margin-top: var(--space-5);">Send an Invitation</a>
-        </div>
+          <a
+            href="{{ site.baseurl }}/contact/"
+            class="btn btn--primary"
+            style="margin-top: var(--space-5);"
+          >
+            Send an Invitation
+          </a>
+        </section>
+      </main>
 
-      </div><!-- /.events-layout__content -->
-
-      <!-- ── RIGHT COLUMN: circular portrait ── -->
-      <aside class="events-layout__media" aria-label="Photo of Alice Oldford as a tourism ambassador">
+      <aside
+        class="events-layout__media"
+        aria-labelledby="events-photo-caption"
+      >
         <figure class="events-layout__figure">
           <picture>
-            <source srcset="{{ site.baseurl }}/assets/images/Tourism_Ambassador.webp" type="image/webp">
+            <source
+              srcset="{{ site.baseurl }}/assets/images/Tourism_Ambassador.webp"
+              type="image/webp"
+            >
             <img
               src="{{ site.baseurl }}/assets/images/Tourism_Ambassador.jpg"
-              alt="Alice Oldford serving as a tourism ambassador at a community event in Lake Placid, Florida"
+              alt="Alice Oldford representing Lake Placid as a tourism ambassador at a community event"
               width="520"
               height="520"
               loading="lazy"
@@ -126,32 +143,31 @@ breadcrumbs:
               class="events-layout__image"
             >
           </picture>
-          <figcaption class="events-layout__caption">Alice Oldford &mdash; Tourism Ambassador, Lake Placid, FL</figcaption>
+          <figcaption id="events-photo-caption" class="events-layout__caption">
+            Alice Oldford &mdash; Tourism Ambassador, Lake Placid, Florida
+          </figcaption>
         </figure>
       </aside>
-
-    </div><!-- /.events-layout -->
-
+    </div>
   </div>
 </section>
 
-<!-- ── EVENTS PAGE STYLES ───────────────────────────────────── -->
 <style>
-
-  /* ── Two-column layout ── */
   .events-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.6fr) minmax(240px, 380px);
     gap: var(--space-10);
     align-items: start;
-    margin-top: var(--space-8);
   }
 
   .events-layout__content {
     min-width: 0;
   }
 
-  /* ── Right column: sticky so it stays visible while scrolling ── */
+  .events-layout__content > * + * {
+    margin-top: var(--space-10);
+  }
+
   .events-layout__media {
     display: flex;
     justify-content: center;
@@ -159,7 +175,6 @@ breadcrumbs:
     top: calc(var(--space-16) + var(--space-4));
   }
 
-  /* ── Circular image ── */
   .events-layout__figure {
     margin: 0;
     width: min(100%, 340px);
@@ -172,8 +187,7 @@ breadcrumbs:
     object-fit: cover;
     object-position: center top;
     border-radius: 50%;
-    display: block;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     border: 4px solid var(--color-primary-highlight);
   }
 
@@ -183,14 +197,53 @@ breadcrumbs:
     color: var(--color-text-muted);
   }
 
-  /* ── Collapse to single column on tablet / mobile ── */
+  .press-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .press-item__outlet {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .press-item__headline {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+  }
+
+  .press-item__headline a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .press-item__headline a:hover,
+  .press-item__headline a:focus-visible {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .press-item__desc,
+  .events-invite__body {
+    color: var(--color-text-muted);
+  }
+
+  .events-invite__title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+  }
+
   @media (max-width: 860px) {
     .events-layout {
       grid-template-columns: 1fr;
       gap: var(--space-6);
     }
 
-    /* On mobile, image moves above the content and centres */
     .events-layout__media {
       order: -1;
       position: static;
@@ -202,5 +255,4 @@ breadcrumbs:
       margin-inline: auto;
     }
   }
-
 </style>
