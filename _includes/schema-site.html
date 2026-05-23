@@ -1,32 +1,87 @@
 <!--
-  Emits WebSite + Person JSON-LD on every page.
+  schema-site.html
+  Emits WebSite + Person + RealEstateAgent JSON-LD on every page.
   Edit _config.yml → your changes propagate here automatically.
+  After domain migration update url/baseurl in _config.yml and this
+  schema updates everywhere instantly.
 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "WebSite",
-      "@id": "{{ site.url }}/#website",
-      "url": "{{ site.url }}/",
-      "name": "{{ site.title }}",
-      "description": "{{ site.description | strip_html | strip_newlines }}",
-      "publisher": { "@id": "{{ site.url }}/#person" }
+      "@id": "https://aliceoldford.com/#website",
+      "url": "https://aliceoldford.com/",
+      "name": "Alice Oldford",
+      "description": "Official website of Alice Oldford — novelist, memoirist, and licensed real estate professional serving the Lake Placid area.",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://aliceoldford.com/#person" }
     },
+
     {
       "@type": "Person",
-      "@id": "{{ site.url }}/#person",
-      "name": "{{ site.author.name }}",
-      "url": "{{ site.url }}/",
-      "email": "{{ site.author.email }}",
-      "description": "{{ site.description | strip_html | strip_newlines }}",
+      "@id": "https://aliceoldford.com/#person",
+      "name": "Alice Oldford",
+      "url": "https://aliceoldford.com/",
+      "email": "aoldford@yahoo.com",
+      "telephone": "+1-863-273-2166",
+      "jobTitle": "Author and Associate Real Estate Broker",
+      "description": "Alice Oldford is a novelist, memoirist, Florida Tourism Ambassador, and licensed Associate Real Estate Broker at Century 21 Lake and Land Myers Realty in Lake Placid, Florida.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://aliceoldford.com/assets/images/Tourism_Ambassador.jpg",
+        "width": 400,
+        "height": 400
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 E Interlake Blvd",
+        "addressLocality": "Lake Placid",
+        "addressRegion": "FL",
+        "postalCode": "33852",
+        "addressCountry": "US"
+      },
+      "worksFor": { "@id": "https://aliceoldford.com/#organization" },
       "sameAs": [
-        {% for profile in site.author.social %}
-          "{{ profile }}"{% unless forloop.last %},{% endunless %}
-        {% endfor %}
+        "https://www.facebook.com/aliceoldfordrealtor/"
+      ]
+    },
+
+    {
+      "@type": ["RealEstateAgent", "LocalBusiness"],
+      "@id": "https://aliceoldford.com/#organization",
+      "name": "Alice Oldford — Century 21 Lake & Land Myers Realty",
+      "url": "https://aliceoldford.com/",
+      "email": "aoldford@yahoo.com",
+      "telephone": "+1-863-273-2166",
+      "image": "https://aliceoldford.com/assets/images/Tourism_Ambassador.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 E Interlake Blvd",
+        "addressLocality": "Lake Placid",
+        "addressRegion": "FL",
+        "postalCode": "33852",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.2939,
+        "longitude": -81.3645
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Lake Placid, Florida"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "sameAs": [
+        "https://www.facebook.com/aliceoldfordrealtor/",
+        "https://century21lakeandlandmyersrealty.com/"
       ]
     }
+
   ]
 }
 </script>
