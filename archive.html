@@ -34,7 +34,7 @@ breadcrumbs:
           <h2 class="archive-year-heading">{{ year_group.name }}</h2>
           <ul class="archive-list" role="list">
             {% for issue in year_group.items %}
-            <li class="archive-item">
+            <li class="archive-item{% if issue.featured %} archive-item--featured{% endif %}">
               <div class="archive-item__icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -45,7 +45,10 @@ breadcrumbs:
                 <span class="archive-item__filetype">PDF</span>
               </div>
               <div class="archive-item__body">
-                <p class="archive-item__date">{{ issue.label }}</p>
+                <p class="archive-item__date">
+                  {{ issue.label }}
+                  {% if issue.featured %}<span class="archive-item__badge" aria-label="Latest issue">Latest Issue</span>{% endif %}
+                </p>
                 <h3 class="archive-item__title">{{ issue.title }}</h3>
                 {% if issue.description %}
                   <p class="archive-item__desc">{{ issue.description }}</p>
