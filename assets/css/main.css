@@ -1710,3 +1710,19 @@ a.contact-details__value:hover {
 }
 .books-hero-banner { margin-bottom: var(--space-8); }
 .books-hero-banner__img { width: 100%; height: auto; display: block; }
+.site-footer__social {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-4);
+}
+
+.site-footer__social-link {
+  color: var(--color-text-muted);
+  transition: color var(--transition-interactive);
+}
+
+.site-footer__social-link:hover {
+  color: var(--color-text);
+}
