@@ -270,4 +270,35 @@
 - title: "June 2013"
   date: "2013-06-01"
   label: "June 2013"
-  description: "Summer real estate guide, outdoor adventure ideas, and Florida market insights.
+  description: "Summer real estate guide, outdoor adventure ideas, and Florida market insights."
+  file: "/assets/alice-oldford-newsletter-june-2013.pdf"
+
+- title: "May 2013"
+  date: "2013-05-01"
+  label: "May 2013"
+  description: "Peak season property market update, trail recommendations, and local Lake Placid news."
+  file: "/assets/alice-oldford-newsletter-may-2013.pdf"
+
+- title: "April 2013"
+  date: "2013-04-01"
+  label: "April 2013"
+  description: "Spring real estate activity, Florida nature highlights, and Lake Placid community events."
+  file: "/assets/alice-oldford-newsletter-april-2013.pdf"
+
+- title: "March 2013"
+  date: "2013-03-01"
+  label: "March 2013"
+  description: "Spring market preview, Lake Placid area listings, and seasonal outdoor activity guide."
+  file: "/assets/alice-oldford-newsletter-march-2013.pdf"
+
+- title: "February 2013"
+  date: "2013-02-01"
+  label: "February 2013"
+  description: "February property picks, Florida trail conditions, and local community news."
+  file: "/assets/alice-oldford-newsletter-february-2013.pdf"
+
+- title: "January 2013"
+  date: "2013-01-01"
+  label: "January 2013"
+  description: "New year real estate outlook, Lake Placid market update, and outdoor trail tips."
+  file: "/assets/alice-oldford-newsletter-january-2013.pdf"
