@@ -27,12 +27,22 @@ breadcrumbs:
 
     <div class="contact-form-wrap">
       <h2 class="section-title">Send a Message</h2>
+
+      <!-- SUCCESS MESSAGE -->
+      <div id="form-success" style="display:none; padding: 2rem; border: 1px solid currentColor; border-radius: 0.5rem; text-align:center; margin-bottom: 1.5rem;">
+        <strong>Message sent!</strong> Alice typically replies within one business day.
+      </div>
+
       <form
         class="contact-form"
+        id="contact-form"
         method="POST"
-        action=""
+        action="https://formspree.io/f/xojbydjo"
         novalidate
         aria-label="Contact form">
+
+        <!-- Redirect back with success flag -->
+        <input type="hidden" name="_next" value="https://www.aliceoldford.com/contact.html?sent=1">
 
         <div class="form-field">
           <label class="form-label" for="contact-name">
@@ -172,3 +182,15 @@ breadcrumbs:
 
   </div>
 </section>
+
+<script>
+  (function () {
+    if (window.location.search.includes('sent=1')) {
+      var form = document.getElementById('contact-form');
+      var success = document.getElementById('form-success');
+      if (form) form.style.display = 'none';
+      if (success) success.style.display = 'block';
+      window.scrollTo({ top: success ? success.offsetTop - 80 : 0, behavior: 'smooth' });
+    }
+  })();
+</script>
