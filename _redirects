@@ -14,6 +14,7 @@
 /realestate.html        /realestate/    301
 /archive.html           /archive/       301
 /books.html             /books/         301
+/greeters.html          /events/        301
 
 # --- Old URL fragments that existed in link audit ---
 /relay.html             /               301
