@@ -15,7 +15,7 @@ baseurl: ""
 author:
   name:  "Alice Oldford"
   email: "aoldford@yahoo.com"
-  phone: ""
+  phone: "+1-863-273-2166"
   social:
     - https://www.facebook.com/aliceoldfordrealtor/
     - https://www.linkedin.com/in/alice-oldford-71170519/
@@ -24,7 +24,10 @@ author:
 organization:
   name: "Alice Oldford"
   type: "Person"
-  logo: "/assets/images/logo.png"
+  logo: "/assets/images/Tourism_Ambassador.jpg"
+
+# --- Default OG image (used when pages don't specify og_image) ---
+og_image_default: "/assets/images/hero-home.jpg"
 
 # --- Navigation (order controls menu order) ---
 nav:

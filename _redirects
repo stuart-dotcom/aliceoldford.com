@@ -1,0 +1,28 @@
+# ============================================================
+# _redirects — Cloudflare Pages 301 redirect map
+# Preserves SEO equity from old .html URL structure
+# to new Jekyll pretty-permalink structure.
+# All old GSC-indexed paths → new canonical paths
+# ============================================================
+
+# --- Old .html page paths → new pretty permalinks ---
+/bookphotos.html        /pictures/      301
+/bookphotos             /pictures/      301
+/pictures.html          /pictures/      301
+/events.html            /events/        301
+/contact.html           /contact/       301
+/realestate.html        /realestate/    301
+/archive.html           /archive/       301
+/books.html             /books/         301
+
+# --- Old URL fragments that existed in link audit ---
+/relay.html             /               301
+/relay                  /               301
+
+# --- Catch trailing-slash variants (belt & suspenders) ---
+/books                  /books/         301
+/realestate             /realestate/    301
+/events                 /events/        301
+/pictures               /pictures/      301
+/archive                /archive/       301
+/contact                /contact/       301

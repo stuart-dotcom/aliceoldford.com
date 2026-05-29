@@ -2,6 +2,7 @@
   Iterates site.nav from _config.yml.
   Active state is set via aria-current="page" and the
   .site-nav__link--active class, compared against page.url.
+  Mobile: closes menu on outside click and on nav link click.
 -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
 
@@ -40,10 +41,44 @@
     var btn  = document.getElementById('nav-toggle');
     var menu = document.getElementById('nav-menu');
     if (!btn || !menu) return;
+
+    function openMenu() {
+      btn.setAttribute('aria-expanded', 'true');
+      menu.classList.add('is-open');
+      btn.setAttribute('aria-label', 'Close navigation menu');
+    }
+
+    function closeMenu() {
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('is-open');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+    }
+
     btn.addEventListener('click', function () {
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('is-open', !expanded);
+      expanded ? closeMenu() : openMenu();
+    });
+
+    // Close on nav link click (mobile single-page feel)
+    menu.querySelectorAll('.site-nav__link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 768) closeMenu();
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+        closeMenu();
+        btn.focus();
+      }
     });
   })();
 </script>
